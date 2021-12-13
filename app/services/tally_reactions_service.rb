@@ -1,11 +1,11 @@
-require 'slack'
+class TallyReactionsService
 
+  def initialize
+  end
 
-Slack.configure do |config|
-  config.token = 'xoxb-646437706976-2768305551106-6QzP5z7VdNBgUfHxakr2Silr'
-  config.token = ENV['SLACK_API_TOKEN']
+  def execute
+    client = Slack::Web::Client.new
+    client.chat_postMessage(channel: '#テスト', text: "Hello, Slack bot! #{Time.now}")
+  end
 end
 
-client = Slack::Web::Client.new
-client.auth_test
-client.chat_postMessage(channel: '#テスト', text: 'Hello, Slack bot!')

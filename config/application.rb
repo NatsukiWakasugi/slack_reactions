@@ -18,5 +18,7 @@ module SlackReactions
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    #
+    config.hosts << '9671-54-238-99-78.ngrok.io'
   end
 end
